@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import MovieList from "./components/MovieList2";
+
+export default class App extends Component {
+  render() {
+    return (
+      <div className="container-fluid-md m-3">
+        <h3>Every Movie is the Best... From a Certain Point of View</h3>
+        <MovieList />
+      </div>
+    );
+  }
 }
-
-export default App;
